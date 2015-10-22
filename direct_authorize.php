@@ -129,6 +129,9 @@
                     e.preventDefault();
                     // instantiate the KartukuOtt object
                     var kartukuOtt = new KartukuOtt();
+					// sandbox = false
+                    // production = true
+                    kartukuOtt.setProduction(false);
 					destroyPopup(tridsbox);
                     // put your merchant token
                     // tips, it can be found in form
