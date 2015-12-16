@@ -1,6 +1,7 @@
+<?php include_once './KartukuDirectAPI.php'; ?>
 <html><head>
         <meta http-equiv="Content-Type" content="text/html, charset=ISO-8859-1">
-        <?php include_once './KartukuDirectAPI.php'; ?><script src="<?php echo KartukuDirectAPI::getIPGUrl();?>js/kartuku-ott.js"></script>
+        <script src="<?php echo KartukuDirectAPI::getIPGUrl();?>js/kartuku-ott.js"></script>
         <style type="text/css"></style><style id="holderjs-style" type="text/css"></style>
         <link href="css/kartuku-style.css" rel="stylesheet" />
     </head>
@@ -9,14 +10,14 @@
             <table>
                 <tbody>
                     <tr>
-                        <td>Direct Authorize</td>                        
+                        <td>Direct Authorize</td>
                     </tr>
                     <tr>
                         <td colspan="2"><hr></td>
                     </tr>
                     <tr>
                         <td>merchantToken</td>
-                        <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="88888" size="75"></td>
+                        <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
 
                     <tr>
@@ -45,17 +46,17 @@
                     </tr>
 
                     <tr>
-                        <td>userCardNo</td>
+                        <td>cardNumber</td>
                         <td><input type="text" kartuku-data-id="cardNumber" value="4811111111111114" size="75"></td>
                     </tr>
 
                     <tr>
-                        <td>userCardExp Month</td>
+                        <td>cardExpMonth</td>
                         <td><input type="text" kartuku-data-id="cardExpMonth" value="01" placeholder="MM" size="2"></td>
                     </tr>
 
                     <tr>
-                        <td>userCardExp Year</td>
+                        <td>cardExpYear</td>
                         <td><input type="text" kartuku-data-id="cardExpYear" value="20" placeholder="YY" size="2"></td>
                     </tr>
 
@@ -110,7 +111,7 @@
                 </tbody></table>
         </form>
         <div id="kartuku-3ds-container"  class="popup-hide">
-    
+
         </div>
         <script>
             // pure JS implementation to retrieve token
@@ -123,7 +124,7 @@
                 submitButton.disabled = false;
                 var btnClose= document.getElementById('btnClose');
 				var tridsbox = document.getElementById("kartuku-3ds-container");
-               
+
 
                 submitButton.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -142,15 +143,15 @@
                         // put the token to the form
                         if(result.url){
                             // open pop up
-                            
+
 							buildPopup(tridsbox,result.url);
-                        }else{                            
+                        }else{
 							destroyPopup(tridsbox);
                             document.getElementById("cardToken").value = result.cardToken;
                             // submit the form
                             form.submit();
                         }
-                        
+
                     };
                     // define the function for error result
                     var errorCallback = function (error) {
@@ -166,52 +167,52 @@
                     kartukuOtt.getToken(form, "authorize", successCallback, errorCallback);
                 });
             };
-            
-            
-			
+
+
+
 			function buildPopup(node,url){
-				
-				
-				
+
+
+
 				//elements
 				var _iframe = document.createElement("iframe");
 				var _center= document.createElement("center");
 				var _btnClose= document.createElement("button");
 				//set attributes
-				
+
 				_iframe.setAttribute("height","450");
 				_iframe.setAttribute("width","450");
-				
+
 				_iframe.setAttribute("id","kartuku-3ds-box");
-				
+
 				_btnClose.setAttribute("id","btnClose");
 				_btnClose.innerHTML="Close";
 				_btnClose.style.display="none";
 				_btnClose.addEventListener("click",function(e){destroyPopup(node)});
-				
+
 				_center.appendChild(_btnClose);
-				
+
 				//put element on dom
 				node.appendChild(_iframe);
-				node.appendChild(_center);			
-				
+				node.appendChild(_center);
+
 				// show it to the world!
-				node.setAttribute("class","popup");		
-				_iframe.setAttribute("src",url);			
-				
+				node.setAttribute("class","popup");
+				_iframe.setAttribute("src",url);
+
 			}
-			
+
 			function destroyPopup(node){
 				node.setAttribute("class","popup-hide");
-				
+
 				while(node.firstChild){
 					node.removeChild(node.firstChild);
 				}
-				
+
 			}
-			
-            
-            
+
+
+
         </script>
 
 

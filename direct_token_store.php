@@ -4,10 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php include_once './KartukuDirectAPI.php'; ?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html, charset=ISO-8859-1">
-        <?php include_once './KartukuDirectAPI.php'; ?><script src="<?php echo KartukuDirectAPI::getIPGUrl();?>js/kartuku-ott.js"></script>
+        <script src="<?php echo KartukuDirectAPI::getIPGUrl();?>js/kartuku-ott.js"></script>
         <style type="text/css"></style><style id="holderjs-style" type="text/css"></style></head>
     </head>
     <body>
@@ -18,7 +19,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>merchantToken</td>
-                        <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="3ed76d63779e450fb62d08c30fc7963a" size="75"></td>
+                        <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
                     <tr>
                         <td>merchantUserCode</td>
@@ -26,28 +27,28 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>cardToken</td>
-                        <td><input type="text" name="cardToken" id="cardToken" value="" size="75"></td>
+                        <td><input type="text" kartuku-data-id="cardToken" name="cardToken" id="cardToken" value="" size="75"></td>
                     </tr>
 
                     <tr>
-                        <td>userCardNo</td>
+                        <td>cardNumber</td>
                         <td><input type="text" kartuku-data-id="cardNumber" value="4011111111111112" size="75"></td>
                     </tr>
 
                     <tr>
-                        <td>userCardExp Month</td>
+                        <td>cardExpMonth</td>
                         <td><input type="text" kartuku-data-id="cardExpMonth" value="01" placeholder="MM" size="2"></td>
                     </tr>
 
                     <tr>
-                        <td>userCardExp Year</td>
+                        <td>cardExpYear</td>
                         <td><input type="text" kartuku-data-id="cardExpYear" value="20" placeholder="YY" size="2"></td>
                     </tr>
                     <tr>
                         <td>cardCVV</td>
-                        <td><input type="text" kartuku-data-id="cardCvv" name="cardCVV" value="123" size="75"></td>
+                        <td><input type="text" kartuku-data-id="cardCvv" name="cardCVV" value="000" size="75"></td>
                     </tr>
-                    
+
                     <tr>
                         <!-- submit button is disabled until document is ready (completely loaded) -->
                         <td colspan="2"><input type="submit" id="submit-button" value="Submit"></td>

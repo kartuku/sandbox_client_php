@@ -4,6 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php include_once './KartukuDirectAPI.php'; ?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,7 +22,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>merchantToken</td>
-                        <td><input type="text" name="merchantToken" id="merchantToken" value="3ed76d63779e450fb62d08c30fc7963a" size="75"></td>
+                        <td><input type="text" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
                     <tr>
                         <td>ipgGateway</td>
@@ -46,7 +47,7 @@ and open the template in the editor.
                         <td>ipgTxnReference</td>
                         <td><input type="text" name="ipgTxnReference" id="ipgTxnReference" value="" size="75"></td>
                     </tr>
-                    
+
                     <tr>
                         <td colspan="2"><input type="submit" value="Submit"></td>
                     </tr>
