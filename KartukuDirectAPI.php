@@ -9,13 +9,13 @@ class KartukuDirectAPI {
 
     public static $MERCHANT_TOKEN = "your merchant token here";
     public static $SECRET_KEY     = "your secret key here";
-
+	
     // ipgUrl
     const IPG_DIRECT_BASE_URL_SANDBOX    = "https://ipg-test.kartuku.com/";
     const IPG_DIRECT_BASE_URL_PRODUCTION = "https://ipg.kartuku.com/";
 
     // timeout in second
-    private $timeOut = 10;
+    private $timeOut = 30;
 
     public static $production = false;
     // constant

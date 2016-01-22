@@ -20,8 +20,10 @@ and open the template in the editor.
             // construct authorize message
             $capture = array();
             $capture["merchantToken"] = $post_data["merchantToken"]; 
-            //-- refer to authorize gateway
+            //-- refer to authorize gateway //-- deprecated
             $capture["ipgGateway"] = $post_data["ipgGateway"]; 
+			//-- refer to authorize acquirer
+            $capture["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             
             //-- Consumer unique invoice no
             $capture["txnReference"] = $post_data["txnReference"];             

@@ -20,8 +20,10 @@ and open the template in the editor.
             // construct authorize message
             $void_purchase = array();
             $void_purchase["merchantToken"] = $post_data["merchantToken"]; 
-            //-- refer to previous process gateway
+            //-- refer to previous process gateway //-- deprecated
             $void_purchase["ipgGateway"] = $post_data["ipgGateway"]; 
+			//-- refer to previous process acquirer
+            $void_purchase["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             //-- Consumer unique invoice no. 
             $void_purchase["txnReference"] = $post_data["txnReference"]; 
             //-- refer to capture no.

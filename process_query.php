@@ -20,8 +20,10 @@ and open the template in the editor.
             // construct authorize message
             $query = array();
             $query["merchantToken"] = $post_data["merchantToken"]; 
-            //-- refer to previous process gateway
+            //-- refer to previous process gateway //-- deprecated
             $query["ipgGateway"] = $post_data["ipgGateway"]; 
+			//-- refer to previous process acquirer 
+            $query["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             //-- Consumer unique invoice no. 
             $query["txnReference"] = $post_data["txnReference"]; 
 

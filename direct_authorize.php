@@ -19,6 +19,16 @@
                         <td>merchantToken</td>
                         <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
+					
+					<tr>
+                        <td>ipgGateway (deprecated)</td>
+                        <td><input type="text" name="ipgGateway" id="ipgGateway" value="" size="75"></td>
+                    </tr>
+					
+					<tr>
+                        <td>ipgAcquirer</td>
+                        <td><input type="text" kartuku-data-id="ipgAcquirer" name="ipgAcquirer" id="ipgAcquirer" value="" size="75"></td>
+                    </tr>
 
                     <tr>
                         <td>filterBin</td>
@@ -87,7 +97,7 @@
 
                     <tr>
                         <td>txnCurrency</td>
-                        <td><input type="text" name="txnCurrency" id="txnCurrency" value="IDR" size="75"></td>
+                        <td><input type="text" kartuku-data-id="txnCurrency" name="txnCurrency" id="txnCurrency" value="IDR" size="75"></td>
                     </tr>
 
                     <tr>
@@ -143,7 +153,6 @@
                         // put the token to the form
                         if(result.url){
                             // open pop up
-
 							buildPopup(tridsbox,result.url);
                         }else{
 							destroyPopup(tridsbox);

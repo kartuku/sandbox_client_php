@@ -20,8 +20,10 @@ and open the template in the editor.
             // construct refund message
             $refund = array();
             $refund["merchantToken"] = $post_data["merchantToken"]; 
-            //-- refer to authorize gateway
+            //-- refer to authorize gateway //-- deprecated
             $refund["ipgGateway"] = $post_data["ipgGateway"]; 
+			//-- refer to authorize acquirer
+            $refund["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             
             //-- Consumer unique invoice no
             $refund["txnReference"] = $post_data["txnReference"];             
