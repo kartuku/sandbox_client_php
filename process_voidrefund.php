@@ -28,7 +28,9 @@ and open the template in the editor.
             $void_refund["txnReference"] = $post_data["txnReference"]; 
             
             $void_refund["ipgTxnReference"] = $post_data["ipgTxnReference"]; 
-
+			//-- refer to refund txnReference
+			$void_refund["chargeTxnReference"] = $post_data["chargeTxnReference"];             
+			
             //var_dump($authorize);
             $json_str = json_encode($void_refund);
             try{

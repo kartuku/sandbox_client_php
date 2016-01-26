@@ -51,6 +51,10 @@ and open the template in the editor.
                         <td>ipgTxnReference</td>
                         <td><input type="text" name="ipgTxnReference" id="ipgTxnReference" value="" size="75"></td>
                     </tr>
+					<tr>
+                        <td>chargeTxnReference</td>
+                        <td><input type="text" name="chargeTxnReference" id="chargeTxnReference" value="" size="75"></td>
+                    </tr>
 
                     <tr>
                         <td colspan="2"><input type="submit" value="Submit"></td>

@@ -30,7 +30,9 @@ and open the template in the editor.
             $refund["txnAmount"] = $post_data["txnAmount"]; 
             $refund["txnCurrency"] = $post_data["txnCurrency"]; 
             
-            $refund["ipgTxnReference"] = $post_data["ipgTxnReference"];             
+            $refund["ipgTxnReference"] = $post_data["ipgTxnReference"];   
+			//-- refer to prev txnReference
+			$refund["chargeTxnReference"] = $post_data["chargeTxnReference"];             
             
             //var_dump($authorize);
             $json_str = json_encode($refund);

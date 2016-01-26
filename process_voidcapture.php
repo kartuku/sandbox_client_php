@@ -28,7 +28,8 @@ and open the template in the editor.
             $void_capture["txnReference"] = $post_data["txnReference"]; 
             //-- refer to capture no.
             $void_capture["ipgCaptureNo"] = $post_data["ipgCaptureNo"]; 
-
+			//-- refer to capture txnReference
+			$void_capture["chargeTxnReference"] = $post_data["chargeTxnReference"];
             //var_dump($authorize);
             $json_str = json_encode($void_capture);
             try{

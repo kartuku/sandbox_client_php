@@ -26,9 +26,12 @@ and open the template in the editor.
             $void_purchase["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             //-- Consumer unique invoice no. 
             $void_purchase["txnReference"] = $post_data["txnReference"]; 
-            //-- refer to capture no.
+            //-- refer to purchase no.
             $void_purchase["ipgTxnReference"] = $post_data["ipgTxnReference"]; 
 
+			//-- refer to purchase txnReference
+			$void_purchase["chargeTxnReference"] = $post_data["chargeTxnReference"];
+			
             //var_dump($authorize);
             $json_str = json_encode($void_purchase);
             try{

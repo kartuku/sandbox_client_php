@@ -39,6 +39,10 @@ and open the template in the editor.
                         <td>ipgCaptureNo</td>
                         <td><input type="text" name="ipgCaptureNo" id="ipgCaptureNo" value="" size="75"></td>
                     </tr>
+					<tr>
+                        <td>chargeTxnReference</td>
+                        <td><input type="text" name="chargeTxnReference" id="chargeTxnReference" value="" size="75"></td>
+                    </tr>
                     <tr>
                         <td colspan="2"><input type="submit" value="Submit"></td>
                     </tr>
