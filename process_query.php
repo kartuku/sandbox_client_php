@@ -21,9 +21,7 @@ and open the template in the editor.
             $query = array();
             $query["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to previous process gateway //-- deprecated
-            $query["ipgGateway"] = $post_data["ipgGateway"]; 
-			//-- refer to previous process acquirer 
-            $query["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
+            // $query["ipgGateway"] = $post_data["ipgGateway"]; //-- deprecated
             //-- Consumer unique invoice no. 
             $query["txnReference"] = $post_data["txnReference"]; 
 

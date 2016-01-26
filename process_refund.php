@@ -21,7 +21,7 @@ and open the template in the editor.
             $refund = array();
             $refund["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to authorize gateway //-- deprecated
-            $refund["ipgGateway"] = $post_data["ipgGateway"]; 
+            // $refund["ipgGateway"] = $post_data["ipgGateway"]; // deprecated
 			//-- refer to authorize acquirer
             $refund["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             

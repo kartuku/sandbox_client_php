@@ -20,14 +20,11 @@ and open the template in the editor.
                         <td>merchantToken</td>
                         <td><input type="text" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
-                    <tr>
+                    <!-- Deprecated -->
+                    <!--<tr>
                         <td>ipgGateway (deprecated)</td>
                         <td><input type="text" name="ipgGateway" id="ipgGateway" value="" size="75"></td>
-                    </tr>
-					<tr>
-                        <td>ipgAcquirer</td>
-                        <td><input type="text" kartuku-data-id="ipgAcquirer" name="ipgAcquirer" id="ipgAcquirer" value="" size="75"></td>
-                    </tr>
+                    </tr>-->
                     <tr>
                         <td>txnReference</td>
                         <td><input type="text" name="txnReference" id="txnReference" value="1422861297434" size="75"></td>

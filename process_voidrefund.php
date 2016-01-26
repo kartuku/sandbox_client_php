@@ -21,9 +21,9 @@ and open the template in the editor.
             $void_refund = array();
             $void_refund["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to previous process gateway //-- deprecated
-            $void_refund["ipgGateway"] = $post_data["ipgGateway"]; 
+            // $void_refund["ipgGateway"] = $post_data["ipgGateway"]; // deprecated
 			//-- refer to previous process ipgAcquirer
-            $void_refund["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
+            $void_refund["ipgAcquirer"] = $post_data["ipgAcquirer"];
             //-- Consumer unique invoice no. 
             $void_refund["txnReference"] = $post_data["txnReference"]; 
             

@@ -21,7 +21,7 @@ and open the template in the editor.
             $capture = array();
             $capture["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to authorize gateway //-- deprecated
-            $capture["ipgGateway"] = $post_data["ipgGateway"]; 
+            // $capture["ipgGateway"] = $post_data["ipgGateway"]; 
 			//-- refer to authorize acquirer
             $capture["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             

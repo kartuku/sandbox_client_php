@@ -20,10 +20,11 @@
                         <td><input type="text" kartuku-data-id="merchantToken" name="merchantToken" id="merchantToken" value="<?php echo KartukuDirectAPI::$MERCHANT_TOKEN?>" size="75"></td>
                     </tr>
 					
-					<tr>
+					<!-- Deprecated -->
+                    <!--<tr>
                         <td>ipgGateway (deprecated)</td>
                         <td><input type="text" name="ipgGateway" id="ipgGateway" value="" size="75"></td>
-                    </tr>
+                    </tr>-->
 					
 					<tr>
                         <td>ipgAcquirer</td>

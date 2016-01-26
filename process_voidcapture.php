@@ -21,7 +21,7 @@ and open the template in the editor.
             $void_capture = array();
             $void_capture["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to previous process gateway //--deprecated
-            $void_capture["ipgGateway"] = $post_data["ipgGateway"]; 
+            // $void_capture["ipgGateway"] = $post_data["ipgGateway"]; // deprecated
 			//-- refer to previous process acquirer
 			$void_capture["ipgGateway"] = $post_data["ipgGateway"]; 
             //-- Consumer unique invoice no. 

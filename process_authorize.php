@@ -31,7 +31,7 @@ and open the template in the editor.
             $authorize["merchantUserCode"] = $post_data["merchantUserCode"]; 
             $authorize["txnTradingDate"] = $post_data["txnTradingDate"]; 
             $authorize["txnStoreCode"] = $post_data["txnStoreCode"]; 
-            $authorize["ipgGateway"] = $post_data["ipgGateway"]; //-- deprecated
+            // $authorize["ipgGateway"] = $post_data["ipgGateway"]; //-- deprecated
             $authorize["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             //-- Consumer unique invoice no
             $authorize["txnReference"] = $post_data["txnReference"]; 

@@ -28,7 +28,7 @@ and open the template in the editor.
             // construct authorize message
             $purchase = array();
             $purchase["merchantToken"] = $post_data["merchantToken"]; 
-            $purchase["ipgGateway"] = $post_data["ipgGateway"]; //-- deprecated
+            // $purchase["ipgGateway"] = $post_data["ipgGateway"]; //-- deprecated
             $purchase["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             $purchase["merchantUserCode"] = $post_data["merchantUserCode"]; 
             $purchase["txnTradingDate"] = $post_data["txnTradingDate"]; 

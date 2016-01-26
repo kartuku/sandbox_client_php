@@ -21,7 +21,7 @@ and open the template in the editor.
             $void_purchase = array();
             $void_purchase["merchantToken"] = $post_data["merchantToken"]; 
             //-- refer to previous process gateway //-- deprecated
-            $void_purchase["ipgGateway"] = $post_data["ipgGateway"]; 
+            // $void_purchase["ipgGateway"] = $post_data["ipgGateway"]; // deprecated
 			//-- refer to previous process ipgAcquirer
             $void_purchase["ipgAcquirer"] = $post_data["ipgAcquirer"]; 
             //-- Consumer unique invoice no. 
