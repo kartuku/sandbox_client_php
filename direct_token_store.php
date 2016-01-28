@@ -90,7 +90,7 @@ and open the template in the editor.
                         alert(error.message + "\n" + error.status);
                     };
                     // get the token
-                    kartukuOtt.getToken(form, "store", successCallback, errorCallback);
+                    kartukuOtt.getToken(form, "storecard", successCallback, errorCallback);
                 });
             };
         </script>
